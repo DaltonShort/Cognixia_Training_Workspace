@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Block</title>
+
+    <style>
+        .yellow-bg {
+            background-color: yellow;
+        }
+
+        .blue-bg {
+            background-color: turquoise;
+        }
+
+        .important {
+            color: red;
+            font-weight: bold;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- 
+        block-level => elements always start on a new line
+                    => take up the entire width available
+                    => ex: <h1>, <p>, and <div>
+        
+        inline => don't start on a new line
+               => take up as much width as necessary
+               => <a>, <button>, <img>, and <span>
+    -->
+
+    <p class="yellow-bg">This paragraph is a block element.</p>
+
+
+    <a href="" class="yellow-bg">Link1</a>
+    <a href="" class="blue-bg">Link2</a>
+
+
+    <!-- 
+        - Most popular block level element: div
+        - divs help out by sectioning/ grouping parts of an HTML page
+        - divs create containers for your elements
+    -->
+    <div class="yellow-bg">
+        <h3>Fruits</h3>
+        <ul>
+            <li>apple</li>
+            <li>banana</li>
+            <li>grapes</li>
+            <li>oranges</li>
+            <li>mango</li>
+        </ul>
+    </div>
+    
+
+    <div>
+        <h3>Article</h3>
+
+        <!-- 
+            span => inline element, usually used to select a section of text
+            strong => bold text, replaces <b> tag as it's more descriptive, but <b> can still be used
+        -->
+        <p class="blue-bg">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque, maiores doloremque! Odit reiciendis rem, animi, excepturi eius officia voluptas natus perspiciatis autem odio dolorem nobis. Reprehenderit repellendus hic culpa velit illum dolorum natus, tempore aliquam minus quasi exercitationem tenetur voluptates reiciendis voluptate dolore esse perspiciatis? Rerum et magni quos, nobis eius praesentium optio enim ipsa ut minus. Non ad fugit quas, facilis nam rerum, corrupti delectus accusantium autem assumenda rem harum cum minima, modi iure atque magni id in fugiat doloribus repellendus. Amet officia nihil, atque mollitia quaerat reiciendis quibusdam sit similique, suscipit quam a harum dolor natus minima at.</p>
+
+        <p>Lorem ipsum <span class="important yellow-bg">dolor sit amet consectetur adipisicing elit.</span> Ullam, vitae ratione tempora ab modi asperiores inventore. Sequi id quidem quas maiores eius, <strong class="blue-bg">exercitationem aliquid mollitia distinctio facere</strong> voluptatibus totam! <b>Minima harum</b> repudiandae doloremque velit quisquam consequatur, eveniet, ex repellendus asperiores tenetur, ducimus animi cum. Dolores culpa saepe doloribus sed iure.</p>
+
+        <p>Lorem <i>ipsum dolor sit amet</i> consectetur adipisicing elit. <em>Non sint repellat ratione aliquam saepe</em> et odio! Officia maxime inventore aut dolore quibusdam? Quisquam dicta, perferendis repellat sapiente porro doloremque deserunt.</p>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Precendence</title>
+
+    <!-- 
+        if linking multiple stylesheets, the last link will have the highest precedence (priority)
+    -->
+    <link rel="stylesheet" href="./styles/styles-1.css" type="text/css">
+    <link rel="stylesheet" href="./styles/styles-2.css" type="text/css">
+
+    <!-- style tag will override any styles from the linked CSS files -->
+    <style>
+        p {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Style Precendence</h1>
+
+    <!-- inline styles (styles attribute) will have the highest precedence no matter what -->
+    <p style="color: green; background-color: yellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat reprehenderit sapiente adipisci, distinctio cumque dolorem quo! Officia odio voluptatem ex, molestias aut quo libero possimus recusandae? Aut, laudantium voluptatibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat reprehenderit sapiente adipisci, distinctio cumque dolorem quo! Officia odio voluptatem ex, molestias aut quo libero possimus recusandae? Aut, laudantium voluptatibus!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi repellat reprehenderit sapiente adipisci, distinctio cumque dolorem quo! Officia odio voluptatem ex, molestias aut quo libero possimus recusandae? Aut, laudantium voluptatibus!</p>
+
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae alias pariatur asperiores. Obcaecati, aspernatur error! Atque architecto sapiente magnam unde excepturi laudantium! Fuga officia ducimus, libero molestias delectus at ipsum!
+    </div>
+    
+</body>
+</html>

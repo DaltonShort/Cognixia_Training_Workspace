@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>Login</h1>
+    
+    <!-- 
+        action => where the form data is going to be sent
+        method => how we're sending the data (GET or POST)
+            GET -> sending data through the head of request (URL)
+            POST -> sending data though the body of request (hidden)
+        target="_blank" -> open results in new tab
+    -->
+    <form action="./success.html" method="post" target="_blank">
+
+        <!-- 
+            label -> label the input
+                for -> match the ide of the input for this label
+
+            input -> form input
+                id -> unique identifier for the input, helps with attaching to a label
+                type -> type of input (text, number, color, etc.)
+                name -> when the form data is sent somewhere, names will mark your data so we know the value sent
+        -->
+        <label for="username">Username:</label>
+        <input type="text"
+               id="username"
+               name="un"
+               />
+
+        <br/><br/>
+
+        <label for="password">Password:</label>
+        <input type="password"
+               id="password"
+               name="pw"
+               />
+
+        <br/><br/>
+
+        <input type="submit" value="Login" />
+    </form>
+
+    <!-- 
+     http://127.0.0.1:5500/01_HTML/success.html?un=test&pw=password123
+    -->
+
+</body>
+</html>

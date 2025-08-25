@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <form action="./success.html" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="version" value="1.1.2">
+    <fieldset>
+        <legend>User Form</legend>
+        <fieldset>
+            <legend>User Information</legend>
+            <label for="username">User Name: </label>
+            <input type="text" id="username" name="username" placeholder="username" required>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" maxlength="20" required>
+        </fieldset>
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label>Age: </label>
+            <input type="number" id="age" name="age" min="18" max="100">
+            <label>Email: </label>
+            <input type="email" id="email" name="email">
+            <label>Phone Number: </label>
+            <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        </fieldset>
+        <fieldset>
+            <legend>Account Type</legend>
+            <label for="user">User</label>
+            <input type="radio" name="account" id="user" value="user">
+            <label for="guest">Guest</label>
+            <input type="radio" name="account" id="guest" value="guest">
+            <label for="admin">Adminstrator</label>
+            <input type="radio" name="account" id="admin" value="admin">
+            <label for="admin">Founder</label>
+            <input type="radio" name="account" id="founder" value="founder" disabled>
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="emailmessage">Emails</label>
+            <input type="checkbox" name="emailmessage" id="emailmessage" value="yes">
+            <label for="textmessage">Text Message</label>
+            <input type="checkbox" name="textmessage" id="textmessage" value="yes">
+        </fieldset>
+        <fieldset>
+            <legend>Date and Time</legend>
+            <input type="date" name="date">
+            <input type="time" name="time">
+            <input type="month" name="month">
+            <input type="week" name="week">
+            <input type="datetime-local" name="datetime-local">
+            <input type="datetime" name="datetime">
+        </fieldset>
+        <fieldset>
+            <legend>Vehicle</legend>
+            <select name="vehicle">
+                <option value="car">Car</option>
+                <option value="motorcycle">Mororcycle</option>
+                <option value="bicycle" selected>Bicycle</option>
+                <option value="Other">Other</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Misc Inputs</legend>
+            <input type="color" name="color">
+            <input type="range" name="range" min="0" max="100">
+        </fieldset>
+        <fieldset>
+            <legend>Media Input</legend>
+            <input type="file" name="file">
+            <input type="image" name="image">
+        </fieldset>
+        <fieldset>
+            <legend>Message</legend>
+            <textarea name="message" rows="5" cols="40"></textarea>
+        </fieldset>
+        <input type="submit" value="Enter Your Form Data">
+        <input type="reset" value="Reset The Form Data">
+    </fieldset>
+    </form>
+</body>
+</html>

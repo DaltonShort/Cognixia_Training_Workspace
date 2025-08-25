@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantics</title>
+
+    <!-- There are two pages on this HTML doc, one uses semantics, the other doesn't. In order to view these two pages side by side, a bit of styling is done. Excepti for the borders on the table, nothing on the actual semantic & non-semantic page are styled with any CSS. -->
+    <style>
+
+        .whole-page {
+            width: 100%;
+            height: 100%;
+        }
+
+        .page {
+            width: 48%;
+            border: 1px black solid;
+            padding: 10px;
+        }
+
+        .semantics-page {
+            float: left;
+        }
+
+        .regular-page {
+            float: right;
+        }
+
+        code {
+            font-weight: bold;
+            color: #266df2;
+            font-size: large;
+        }
+
+        table, th, td {
+            border: 1px black solid;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Semantics vs Non-Semantics</h1>
+
+    <p>Semantic elements are often just a <code>&#60;div&#62;</div></code> element with a descriptive name. Some may have special formatting properties, like the <code>&#60;figure&#62;</code> element, that has a slight indent from the left.</p>
+    
+    <br><br>
+
+
+    <div class="whole-page">
+
+        <div class="page semantics-page">
+
+            <header>
+                <h1>Semantics Title</h1>
+
+                <nav>
+                    <a href="https://www.wikipedia.org/">Wikipedia</a>
+                    <a href="https://stackoverflow.com/">Stack Overflow</a>
+                    <a href="https://www.w3schools.com/">W3 Schools</a>
+                    <a href="https://www.youtube.com/">Youtube</a>
+                    <a href="https://www.google.com/">Google</a>
+                </nav>
+            </header>
+            
+            <main>
+                <article>
+                    <section>
+                        <h2>Section 1.1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, doloribus temporibus sed provident reiciendis delectus cum expedita veniam quod vel quam quaerat rem. Eius, eligendi unde iusto a labore pariatur.</p>
+                    </section>
+
+                    <figure>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2934/2934894.png" 
+                             alt="watermelon"
+                             width="200">
+                        
+                        <figcaption>Two Pieces of Watermelon</figcaption>
+                    </figure>
+
+                    <section>
+                        <h2>Section 1.2</h2>
+                        <p>Eum sed exercitationem dolore ex maiores maxime aspernatur aut ipsum voluptatem corporis, id quibusdam, incidunt laborum praesentium cupiditate, blanditiis ullam numquam. Molestiae. Deleniti quia neque, nostrum aperiam harum cumque, illo id, tempora adipisci ad corrupti a reiciendis voluptates ipsam. Aspernatur impedit et quam repudiandae.</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fruit</th>
+                                    <th>Color</th>
+                                    <th>Season</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Apple</td>
+                                    <td>Red</td>
+                                    <td>August - November</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Peach</td>
+                                    <td>Orange / Red / Pink</td>
+                                    <td>April - October</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Watermelon</td>
+                                    <td>Green / Red</td>
+                                    <td>May - September</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Orange</td>
+                                    <td>Orange</td>
+                                    <td>November - June</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Banana</td>
+                                    <td>Yellow</td>
+                                    <td>All Year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                </article>
+
+                <article>
+                    <section>
+                        <h2>Section 2.1</h2>
+                        <p>Expedita nihil rem quis commodi nobis ipsa? Dolorum quo minus eaque, doloribus mollitia perspiciatis nisi. Labore.</p>
+                        <p>Reprehenderit nam ducimus unde sunt. Omnis velit rerum fuga consectetur. Deserunt accusantium fuga reiciendis saepe odit eos culpa repudiandae earum nulla doloribus.</p>
+                        <ul>
+                            <li>Placeat Nisi</li>
+                            <li>Quod Neque</li>
+                            <li>Similique</li>
+                            <li>Repellendus Non Quia</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>Section 2.2</h2>
+
+                        <figure>
+                            <img src="https://cdn-icons-png.flaticon.com/512/765/765560.png"
+                                alt="grapes"
+                                width="200">
+                            <figcaption>Purple Grapes</figcaption>
+                        </figure>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, maxime. Minima non laudantium neque veritatis accusamus? Dolor minus, facere exercitationem vero asperiores aperiam aspernatur. Quia laudantium est asperiores esse officiis.</p>
+
+                        <form action="./success.html" method="get" target="_blank">
+
+                            <h3>Fruit Survey</h3>
+
+                            <label for="favorite-fruit">What is Your Favorite Fruit?</label>
+                            <input type="text"
+                                   id="favorite-fruit"
+                                   name="favorite-fruit"
+                                   required>
+                            <br><br>
+
+                            <label for="fruit-allergy">Are You Allergic to Any Fruits?</label>
+                            <select name="fruit-allergy" 
+                                    id="fruit-allergy">
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                            <br><br>
+
+                            <input type="submit" value="Submit">
+                        </form>
+
+                        <br><br>
+
+                    </section>
+                </article>
+
+                <aside>Your Ad Here!</aside>
+
+            </main>
+
+            <footer>Footer - Copyright @2022</footer>
+
+        </div>
+
+
+        <div class="page regular-page">
+            
+            <div>
+                <h1>Non-Semantics Title</h1>
+                <div>
+                    <a href="https://www.wikipedia.org/">Wikipedia</a>
+                    <a href="https://stackoverflow.com/">Stack Overflow</a>
+                    <a href="https://www.w3schools.com/">W3 Schools</a>
+                    <a href="https://www.youtube.com/">Youtube</a>
+                    <a href="https://www.google.com/">Google</a>
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                    <div>
+                        <h2>Section 1.1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, doloribus temporibus sed provident reiciendis delectus cum expedita veniam quod vel quam quaerat rem. Eius, eligendi unde iusto a labore pariatur.</p>
+                    </div>
+
+                    <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/2934/2934894.png" 
+                             alt="watermelon"
+                             width="200">
+                        <div>Two Pieces of Watermelon</div>
+                    </div>
+
+                    <div>
+                        <h2>Section 1.2</h2>
+                        <p>Eum sed exercitationem dolore ex maiores maxime aspernatur aut ipsum voluptatem corporis, id quibusdam, incidunt laborum praesentium cupiditate, blanditiis ullam numquam. Molestiae. Deleniti quia neque, nostrum aperiam harum cumque, illo id, tempora adipisci ad corrupti a reiciendis voluptates ipsam. Aspernatur impedit et quam repudiandae.</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Fruit</th>
+                                    <th>Color</th>
+                                    <th>Season</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Apple</td>
+                                    <td>Red</td>
+                                    <td>August - November</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Peach</td>
+                                    <td>Orange / Red / Pink</td>
+                                    <td>April - October</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Watermelon</td>
+                                    <td>Green / Red</td>
+                                    <td>May - September</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Orange</td>
+                                    <td>Orange</td>
+                                    <td>November - June</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Banana</td>
+                                    <td>Yellow</td>
+                                    <td>All Year</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div>
+                        <h2>Section 2.1</h2>
+                        <p>Expedita nihil rem quis commodi nobis ipsa? Dolorum quo minus eaque, doloribus mollitia perspiciatis nisi. Labore.</p>
+                        <p>Reprehenderit nam ducimus unde sunt. Omnis velit rerum fuga consectetur. Deserunt accusantium fuga reiciendis saepe odit eos culpa repudiandae earum nulla doloribus.</p>
+                        <ul>
+                            <li>Placeat Nisi</li>
+                            <li>Quod Neque</li>
+                            <li>Similique</li>
+                            <li>Repellendus Non Quia</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h2>Section 2.2</h2>
+
+                        <div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/765/765560.png"
+                                alt="grapes"
+                                width="200">
+                            <div>Purple Grapes</div>
+                        </div>
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, maxime. Minima non laudantium neque veritatis accusamus? Dolor minus, facere exercitationem vero asperiores aperiam aspernatur. Quia laudantium est asperiores esse officiis.</p>
+                    </div>
+
+                    <form action="./success.html" method="get" target="_blank">
+
+                        <h3>Fruit Survey</h3>
+
+                        <label for="favorite-fruit">What is Your Favorite Fruit?</label>
+                        <input type="text"
+                               id="favorite-fruit"
+                               name="favorite-fruit"
+                               required>
+                        <br><br>
+
+                        <label for="fruit-allergy">Are You Allergic to Any Fruits?</label>
+                        <select name="fruit-allergy" 
+                                id="fruit-allergy">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <br><br>
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                    <br><br>
+
+                </div>
+
+                <div>Your Ad Here!</div>
+
+            </div>
+
+            <div>Footer - Copyright @2022</div>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>

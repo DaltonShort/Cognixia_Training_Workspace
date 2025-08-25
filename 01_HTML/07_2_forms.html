@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+
+     <!-- 
+        <label> -> labels an input
+        <fieldset> -> group relevant inputs together
+        <legend> -> label/describe the fieldset 
+     -->
+     <div>
+        <h1>Survey</h1>
+
+        <form action="./success.html" method="get" target="_blank">
+
+        <fieldset>
+
+            <legend>Personal Info</legend>
+
+            <label for="name-input">Name</label>
+            <input type="text" name="name" id="name-input" placeholder="Your Name Here">
+
+            <br><br>
+            <span>Gender:</span>
+            <br>
+
+            <label for="female">Female</label>
+
+            <!--the value attribute will set the information passed submitted directly-->
+            <!--radio inputs only allow one tag to be selected out of a group with the same name attribute-->
+            <!--only the value of the selected radio input will be sbumitted-->
+            <input type="radio" id="female" name="gender" value="female">
+                
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male">
+                
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other">
+                
+            <label for="na">Prefer Not to Answer</label>
+            <!--The default attribute will be automatically selected-->
+            <input type="radio" id="na" name="gender" value="na" default><br>
+
+
+
+            <br>
+            <span>How would you like to be contacted?</span>
+            <br>
+
+            <label for="byphone">Phone: </label>
+            <!--checkbox input allows any number of options to be selected-->
+            <input type="checkbox" id="byphone" name="contact-phone" value="phone">
+            <label for="byemail">email: </label>
+            <!--the checked atribute will have this checkbox checked by default-->
+            <input type="checkbox" id="byemail" name="contact-email" value="email" checked>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Opinions</legend>
+
+            <label for="temperature">Perfect Temperature</label>
+            <input type="number" 
+                   name="temperature" 
+                   id="temperature" 
+                   max="100" 
+                   required>
+
+            <label for="seasons">Favorite Season</label>
+            <select name="seasons" id="seasons">
+                <option value="summer">Summer</option>
+                <option value="fall">Fall</option>
+                <option value="winter">Winter</option>
+                <option value="spring">Spring</option>
+            </select>
+
+        </fieldset>
+
+        <br>
+        <button type="submit">Submit</button>
+
+        </form>
+
+
+    </div>
+    
+</body>
+</html>

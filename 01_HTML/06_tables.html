@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables</title>
+
+    <!-- tables will not have any border  -->
+    <style>
+        table, th, td {
+            border: 1px solid black
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+
+        <!-- This is a typical table and how most might set them up -->
+
+        <!-- tr -> rows in a table
+             th -> table headers (column headers)
+             td -> regular cell 
+        -->
+        <h1>Tables</h1>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sam</td>
+                <td>Marketing</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sam</td>
+                <td>Marketing</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Sam</td>
+                <td>Marketing</td>
+            </tr>
+        </table>
+    </div>
+
+    <br><br>
+
+
+
+    <!-- This is the better way to set up your table if using Bootstrap (will look into this later in CSS section), try to group your body + head of your table -->
+
+
+    <!-- caption => label/header for your table -->
+    <table style="margin: 0 auto">
+        <caption>Products Table</caption>
+
+        <!-- thead -> descriptive tag (semantic), labels the "head" of the table -->
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+
+        <!-- tbody -> contents of the table -->
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>table</td>
+                <td>5</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>chair</td>
+                <td>5</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>lamp</td>
+                <td>15</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>couch</td>
+                <td>7</td>
+                <td>700</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    
+    <br><br>
+
+
+    <!-- Table below shows examples for when a cell is going to take more than one row or column -->
+
+    <table style="width: 60%;">
+        <caption>Demo Table</caption>
+        <thead>
+            <th>Name</th>
+            <th>id</th>
+            <th>username</th>
+            <th>password</th>
+            <th>strengths</th>
+        </thead>
+        
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <!-- colspan -> take up multiple columns -->
+                <td colspan="2">alice1</td>
+                <td>password1</td>
+                <td colpan="2">Java, SQL</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>24</td>
+                <td>bob1</td>
+                <td>password2</td>
+                <td colspan="2">HTML, CSS, Javascript</td>
+            </tr>
+            <tr>
+                <!-- rowspan -> take up mulitple rows -->
+                <th rowspan="2">
+                    Hello World
+                </th>
+                <td>52</td>
+            </tr>
+            <tr>
+                <td>37</td>
+                <td>num</td>
+                <td>HelloWorld</td>
+                <td>HelloWorld1</td>
+                <td>Every Programming Language Ever</td>
+            </tr>
+        </tbody>
+        <tfoot><tr><td>Table Footer</td></tr></tfoot>
+    </table>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic</title>
+</head>
+<body>
+
+    <!-- 
+        Semantics -> elements that clearly describe that content it holds to the browser and developer
+                  -> after HTML5, instead of using <div> or <span> elements, more descriptive elements created for common parts of a page
+                  -> often don't do anything special, often div elements that have a descriptive name
+                  -> https://www.w3schools.com/html/html5_semantic_elements.asp 
+     -->
+
+    <!-- 
+        Below are not all the semantic tags in HTML
+
+        <header>     -> contains the head part of the page (ex: page title, navigation bar, logo, etc.)
+        <nav>        -> navigation bar, links to other parts of the site
+        <main>       -> contains main content of the page
+        <article>    -> contains independent content or document (often blocks of text) like a blog post or news story
+        <section>    -> defines a section in a document
+        <figure>     -> contains media or figures like pictures or diagrams
+        <figcaption> -> describes the figure element
+        <aside>      -> content that is indirectly related to surrounding content, often a sidebar on a page
+        <footer>     -> footer of the page
+    -->
+
+    <header>
+        <h1>Title</h1>
+
+        <nav>
+            <a href="https://www.wikipedia.org/">Wikipedia</a>
+            <a href="https://stackoverflow.com/">Stack Overflow</a>
+            <a href="https://www.w3schools.com/">W3 Schools</a>
+            <a href="https://www.youtube.com/">Youtube</a>
+            <a href="https://www.google.com/">Google</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section>Section 1.1</section>
+            <figure>
+                <img src="" alt="fig1">
+                <figcaption>fig 1 caption</figcaption>
+            </figure>
+            <section>Section 1.2</section>
+        </article>
+
+        <article>
+            <section>Section 2.1</section>
+            <section>
+                Section 2.2
+                <figure>
+                    <img src="" alt="fig2">
+                    <figcaption>fig 2 caption</figcaption>
+                </figure>
+            </section>
+        </article>
+
+        <aside>Your Ad Here!</aside>
+    </main>
+
+    <footer>Copyright @2025</footer>
+
+</body>
+</html>
