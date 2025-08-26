@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+
+    <style>
+        .red-box {
+            border: 3px red solid;
+            margin: 20px; /* adds whitespace around an element in all directions. pushes other elements similar to a float position element*/
+            padding: 10px; /*Space between border and contents of element*/
+        }
+
+        .blue-box {
+            border: 3px blue solid;
+            /* Padding: top/bottom left/right */
+            padding: 20px 10px;
+            margin: 30px 15px;
+        }
+
+        .green-box {
+            border: 3px green solid;
+            /* padding: top right bottom left */
+            padding: 5px 10px 15px 20px;
+            /* padding-left: 10px; */
+        }
+
+
+        .small-box {
+            width: 100px;
+            height: 200px;
+            display: inline-block; 
+            /* Transform a div into an inline instead of a block level element*/
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Box Model</h1>
+
+    <div class="small-box red-box">Red Div</div>
+
+    <div class="small-box blue-box">Blue Div</div>
+
+    <div class="small-box green-box">Green Div</div>
+    
+</body>
+</html>

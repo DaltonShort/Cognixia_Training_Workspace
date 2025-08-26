@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning Elements</title>
+
+
+    <style>
+        .static {
+            /* Moves with flow of the page; default position */
+            position: static;
+
+            width: 200px;
+            height: 50px;
+            border: 5px red solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .relative {
+            /* relative = move relative to where element was on page originally */
+            position: relative;
+            left: 90px;
+            top: 50px;
+
+
+
+            width: 200px;
+            height: 50px;
+            border: 5px green solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .fixed {
+            /* fixed = stays on screen in position even when scrolling */
+            position: fixed;
+            bottom: 50px;
+            right: 0px;
+
+
+            width: 200px;
+            height: 50px;
+            border: 5px purple solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+
+        }
+
+        .parent {
+            /* parent of absolute element ahould always be relative with no pixel shifts */
+            position: relative;
+
+            width: 500px;
+            height: 1400px;
+            border: 5px black solid;
+        }
+
+        .absolute {
+            /* absolute = stay in fixed position relative to container or parent it is in */
+            position: absolute;
+            bottom: 0px;
+            right: 30px;
+
+
+            width: 200px;
+            height: 50px;
+            border: 5px blue solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .sticky {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+
+            width: 200px;
+            height: 50px;
+            border: 5px orange solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+        .floating {
+            /* floating = sometimes associated with positioning. Pushes other text it would be covering to another part of the page so there is nothing behind or on top of it */
+            float: left;
+
+            width: 200px;
+            height: 50px;
+            border: 5px pink solid;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Positioning Elements</h1>
+
+    <p> 5 types of positioning: <span style="color: red;"></span> static, <span style="color: green;">relative </span>, <span style="color: purple;">fixed</span>, <span style="color: blue;">absolute</span>, and <span style="color: orange;">sticky</span> Below you will see the positioning of each of these in div elements</p>
+
+    <div class="static">
+        Static Div
+    </div>
+
+    <div class="relative">Relative Div</div>
+
+    <div class="fixed">
+        Fixed Div
+    </div>
+
+    <div class="sticky">
+        Sticky Div
+    </div>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic libero minus reprehenderit, dolore repellat illo non nihil? Nesciunt, vero harum. Molestiae incidunt perferendis amet blanditiis dolores accusantium maxime corporis!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic libero minus reprehenderit, dolore repellat illo non nihil? Nesciunt, vero harum. Molestiae incidunt perferendis amet blanditiis dolores accusantium maxime corporis!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic libero minus reprehenderit, dolore repellat illo non nihil? Nesciunt, vero harum. Molestiae incidunt perferendis amet blanditiis dolores accusantium maxime corporis!</p>
+
+    <div class="floating">
+        Floating Div
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias hic libero minus reprehenderit, dolore repellat illo non nihil? Nesciunt, vero harum. Molestiae incidunt perferendis amet blanditiis dolores accusantium maxime corporis!</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, amet at ducimus nulla repellat ex id illum optio dolor? Inventore sunt sapiente, a unde fuga accusamus quos architecto exercitationem reprehenderit.</p>
+
+
+    <div class="parent">
+        <div class="absolute">
+            Absolute Div
+        </div>
+    </div>
+
+    <img src="https://www.google.com/imgres?q=css%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F62%2FCSS3_logo.svg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACSS3_logo.svg&docid=1BFpZJlANz8SCM&tbnid=QL5-NL3di7wJ6M&vet=12ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA..i&w=512&h=512&hcb=2&ved=2ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA" alt="CSS Logo" width="500" />
+
+    <img src="https://www.google.com/imgres?q=css%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F62%2FCSS3_logo.svg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACSS3_logo.svg&docid=1BFpZJlANz8SCM&tbnid=QL5-NL3di7wJ6M&vet=12ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA..i&w=512&h=512&hcb=2&ved=2ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA" alt="CSS Logo" width="500" />
+
+    <img src="https://www.google.com/imgres?q=css%20logo&imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F6%2F62%2FCSS3_logo.svg&imgrefurl=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ACSS3_logo.svg&docid=1BFpZJlANz8SCM&tbnid=QL5-NL3di7wJ6M&vet=12ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA..i&w=512&h=512&hcb=2&ved=2ahUKEwiDvbHAzKiPAxVYRjABHbRfNRIQM3oECBsQAA" alt="CSS Logo" width="500" />
+
+    
+</body>
+</html>
