@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Rules</title>
+
+    <style>
+
+        /* 
+            selectors -> how we select elements to apply css styles
+                      -> list of selectors: https://www.w3schools.com/cssref/css_selectors.asp 
+        */
+        p {
+            color: blue;
+        }
+
+        /* class -> multiple elements can have the same class */
+        .myClass {
+            background-color: aqua;
+        }
+
+        /* id -> unique and applied to only one element */
+        #special {
+            font-weight: bold;
+        }
+
+        /* any paragraph inside of a div will have this style */
+        div p {
+            color: red;
+        }
+
+        /* :hover -> when you hover over, style is applied */
+        .highlight:hover {
+            background-color: yellow;
+        }
+
+        /* Select all elements */
+        * {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Rules</h1>
+
+    <p class="myClass">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit cupiditate ipsum ipsa temporibus! Adipisci soluta architecto nam itaque aliquid suscipit aliquam tenetur nostrum commodi dolorum dignissimos est numquam, et accusamus?</p>
+    
+    <p class="myClass" id="special">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ratione error aspernatur recusandae. Excepturi modi laborum dolor quod laudantium nesciunt, omnis nisi odio dolorum. Nihil ex fuga itaque accusantium assumenda?</p>
+
+    <p class="highlight">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod alias inventore ad sit eos magnam sint temporibus obcaecati, ipsa ducimus sequi voluptatem nam corporis repudiandae est optio. Neque, asperiores aliquid?</p>
+
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aperiam quia? <span class="highlight">HOVER OVER ME!!!</span> Dolores vero quam, accusantium possimus illum quo blanditiis maiores itaque adipisci beatae dolorem aut consequatur corrupti, molestiae et! Illum.</p>
+    </div>
+
+
+
+
+</body>
+</html>
