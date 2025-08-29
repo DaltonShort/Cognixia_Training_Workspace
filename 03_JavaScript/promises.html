@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+
+    <h1>Promises</h1>
+
+    <p>
+        This page will generate a random EVEN number. We will call a function to generate this number, however, generating this number takes time. The page will already be fully loaded by the time the number is generated.
+    </p>
+
+    <p>
+        Generate Random <b>Even</b> Number: <span id="ranNum">?</span>
+    </p>
+
+    <script>
+
+        /*
+            Promises were introduced during ES6, they handle asynch events. Most developers don't use Promises directly, they use promise-based libraries.
+        */
+
+        // Promise ( function )
+        // function => event/process that needs to be completed by the promise
+        // function created should have two arguments
+        // resolve => object/funtion that represents success
+        // reject => object/function that represents failure
+        // setTimeout() => accept a funtion/callback in order to perform some task and accepts a time needed to perform the task
+        const myPromise = new Promise( (resolve, reject) => {
+
+            // will take 3 secs to perform the actions pass to in the callback
+            setTimeout( () => {
+
+                // create random number between 1-100, then round it
+                let random = Math.floor(Math.random() * 100);
+
+                // if random number is divisble by 2 (even), successful
+                let success = (random % 2) === 0; // true or false
+
+                if( success ) {
+                    // invoking a function called resolve, meaning operation was successful
+                    resolve("Sucess! Number = " + random) 
+                }
+                else {
+                    // reject will indicate some sort of failure
+                    reject("Error! Number is odd, num = " + random)
+                }
+
+            }, 3000 ) // 3 seconds to perform operation
+
+        } );
+
+        
+        // print the promise object
+        console.log("Created Promise")
+        console.log(myPromise)
+
+        var createdNum = 0;
+
+        myPromise
+            // as long as it succeeds (resolve)
+            .then( result => {
+                console.log(`The result from promise was: ${result}`)
+                // remove beginning string and grab only the number
+                let randomNum = result.substring(17)
+
+                // return new Promise( (resolve, reject) => {
+                //     if(randomNum < 75) {
+                //         reject("Number was less than 75")
+                //     }
+
+                //     resolve(randomNum)
+                // } )
+
+                // always going to succeed (no reject here)
+                return new Promise( (resolve) => {
+                    resolve(randomNum)
+                } )
+
+            } )
+            .then( (randomNum) => {
+                console.log("Even Random = " + randomNum)
+                createdNum = randomNum;
+
+                document.getElementById("ranNum").innerText = createdNum
+
+            } )
+            // if it fails (reject)
+            .catch( error => {
+                console.error(`Error happened: ${error}`)
+                document.getElementById("ranNum").innerText = "ERROR!"
+            } )
+
+            console.log("createdNum = " + createdNum)
+
+
+            // PROMISES 
+            // - going to perform some task
+            // - want to tell the promise what to do if the task fails or succeeds
+
+
+    </script>
+    
+</body>
+</html>

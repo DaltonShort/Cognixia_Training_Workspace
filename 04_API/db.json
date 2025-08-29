@@ -1,0 +1,23 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "chair",
+      "price": 25.99,
+      "qty": 10
+    },
+    {
+      "id": "2",
+      "name": "table",
+      "price": 125.99,
+      "qty": 10
+    },
+    {
+      "id": "3",
+      "name": "lamp",
+      "price": 10.99,
+      "qty": 15
+    }
+  ],
+  "book": []
+}
